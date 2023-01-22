@@ -1,0 +1,2927 @@
+<%@include file="header.jsp" %>
+ <!-- 404 Error Text -->
+ <div class="text-center">
+ <div class="error mx-auto" data-text="404">404</div>
+ <p class="lead text-gray-800 mb-5">Page Not Found</p>
+ <a href="index.jsp">&larr; Back to Dashboard</a>
+ </div>
+ 
+<%@include file="footer.jsp" %>
+<%@include file="header.jsp" %>
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Add Booking</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+ </div>
+ <div class="card-body">
+ <form class="user" action="BookingService.jsp">
+ <div class="form-group row">
+    <label class="col-sm-2">User Name
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="userName">
+        </div>
+        <label class="col-sm-2">Mobile No
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" 
+name="mobNo" >
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Address
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+name="address" >
+ </div>
+ <label class="col-sm-2">Booking Date
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="date" class="form-control" 
+name="bDate" >
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">From Date
+ <span class="float-right">:</span>
+</label> 
+<div class="col-sm-4">
+    <input type="date" class="form-control" 
+    name="fDate">
+     </div>
+     <label class="col-sm-2">To Date
+     <span class="float-right">:</span>
+     </label>
+     <div class="col-sm-4">
+     <input type="date" class="form-control" 
+    name="tDate">
+     </div>
+     </div>
+     <div class="form-group row">
+     <label class="col-sm-2">Visit Type
+     <span class="float-right">:</span>
+     </label>
+     <div class="col-sm-4">
+     <input type="text" class="form-control" 
+    name="servicestype" >
+</div>
+<label class="col-sm-2">Total Amount
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="tAmt" >
+</div> 
+</div>
+<div class="form-group row">
+<div class="col-sm-5"></div>
+<div class="col-sm-4">
+<input type="submit" name="action" class="btn btnprimary" value="Submit">
+<input type="reset" class="btn btn-danger" 
+value="Reset">
+</div> 
+</div> 
+</form>
+</div>
+</div>
+</div>
+</div>
+<%@include file="footer.jsp" %>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+ if($(v).attr('href') == 'addBooking.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script>
+<%@include file="header.jsp" %>
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Add Buyer</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+ </div>
+ <div class="card-body">
+ <form class="user" method="post" 
+action="buyerService.jsp">
+ <div class="form-group row">
+ <label class="col-sm-2">Name
+ <span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="strName" placeholder="Name">
+</div>
+<label class="col-sm-2">Age
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="number" class="form-control" 
+name="numAge" placeholder="Age"> 
+</div> 
+</div>
+<div class="form-group row"> 
+<label class="col-sm-2">Gender
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<select class="form-control" name="strGender">
+<option value="">--Select--</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
+</div>
+<label class="col-sm-2">Mobile No.
+    <span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="strMobileNo" placeholder="Mobile No.">
+</div> 
+</div>
+<div class="form-group row">
+<label class="col-sm-2">Email-Id
+<span class="float-right">:</span>
+</label> 
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="strEmailId" placeholder="Email-Id">
+</div>
+<label class="col-sm-2">Date
+    <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="date" class="form-control" 
+name="strJoinDate" placeholder="Join Date">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Address
+ <span class="float-right">:</span>
+</label>
+<div class="col-sm-10">
+<textarea rows="3" class="form-control" 
+name="strAddress" placeholder="Address"></textarea>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-5"></div>
+<div class="col-sm-4">
+<input type="submit" name="action" class="btn btnprimary" value="Submit">
+<input type="reset" class="btn btn-danger" 
+value="Reset">
+</div> 
+</div> 
+</form>
+</div>
+</div>
+</div>
+</div>
+<%@include file="footer.jsp" %>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('a').each(function(e, v){
+    if($(v).attr('href') == 'addBuyer.jsp'){
+    $(v).addClass('active');
+}
+ });
+ })
+</script> 
+<%@include file="header.jsp" %>
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Add Contact-Us</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+ </div>
+ <div class="card-body">
+ <form class="user" action="ContactusService.jsp">
+ <div class="form-group row">
+ <label class="col-sm-2">Name
+    <span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="name" placeholder="">
+</div>
+<label class="col-sm-2">Mobile No
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="mobile" placeholder="">
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2">Email-Id
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="emial" class="form-control" 
+name="email">
+</div>
+<label class="col-sm-2">Subject
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+    <input type="text" class="form-control" 
+    name="subject">
+     </div>
+     </div>
+     <div class="form-group row">
+     <label class="col-sm-2">Message
+     <span class="float-right">:</span>
+     </label>
+     <div class="col-sm-4">
+     <input type="text" class="form-control" 
+    name="message">
+     </div>
+     </div>
+     <div class="form-group row">
+     <div class="col-sm-5"></div>
+     <div class="col-sm-4">
+     <input type="submit" name="action" class="btn btnprimary" value="Submit">
+    </div>
+    <%@include file="footer.jsp" %>
+    <script type="text/javascript">
+     $(document).ready(function(){
+     $('a').each(function(e, v){
+     if($(v).attr('href') == 'addContactus.jsp'){
+     $(v).addClass('active');
+     }
+     });
+     })
+    </script>
+    <%@include file="header.jsp" %>
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Attendance</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+        <div class="card shadow mb-4">
+        <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+        </div>
+        <div class="card-body">
+        <form class="user" action="EmpAttendenceService.jsp">
+        <div class="form-group row">
+        <label class="col-sm-2">User Id
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="userId" placeholder="">
+        </div>
+        <label class="col-sm-2">Name
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="userName" placeholder="">
+        </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2">Date
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <input type="date" class="form-control" 
+               name="currentDate">
+                </div>
+                <label class="col-sm-2">Attendance
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <select name="attendence" class="form-control">
+                <option value="Absent">Absent</option>
+                <option value="Present">Present</option>
+                </select>
+                </div>
+                </div>
+                <div class="form-group row">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-4">
+                <input type="submit" name="action" class="btn btnprimary" value="Submit">
+                <input type="reset" class="btn btn-danger" 
+               value="Reset">
+                </div> 
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+       <%@include file="footer.jsp" %>
+       <script type="text/javascript">
+        $(document).ready(function(){
+        $('a').each(function(e, v){
+        if($(v).attr('href') == 'addEmpAttendence.jsp'){
+        $(v).addClass('active');
+        }
+        });
+        })
+       </script>
+       <%@include file="header.jsp" %>
+       <div class="d-sm-flex align-items-center justify-content-between mb-4">
+       <h1 class="h3 mb-0 text-gray-800">Add Leave</h1>
+       </div>
+       <div class="row">
+       <div class="col-lg-12">
+       <div class="card shadow mb-4">
+       <div class="card-header py-3">
+       <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+       </div>
+       <div class="card-body">
+       <form class="user" action="EmpLeaveService.jsp">
+       <div class="form-group row">
+       <label class="col-sm-2">User Id
+       <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="userId" placeholder="">
+    </div>
+    <label class="col-sm-2">Name
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" 
+        name="userName" placeholder="">
+         </div>
+         </div>
+         <div class="form-group row">
+         <label class="col-sm-2">From Date
+         <span class="float-right">:</span>
+         </label>
+         <div class="col-sm-4">
+         <input type="date" class="form-control" 
+        name="fromDate">
+         </div>
+         <label class="col-sm-2">To Date
+         <span class="float-right">:</span>
+         </label>
+         <div class="col-sm-4">
+         <input type="date" class="form-control" 
+        name="toDate">
+         </div>
+         </div>
+         <div class="form-group row">
+         <label class="col-sm-2">Leave For
+         <span class="float-right">:</span>
+         </label>
+         <div class="col-sm-4">
+            <input type="text" class="form-control" 
+            name="leaveFor">
+             </div>
+             <label class="col-sm-2">Remark
+             <span class="float-right">:</span>
+             </label>
+             <div class="col-sm-4">
+             <input type="text" class="form-control" 
+            name="remarks">
+             </div>
+             </div>
+             <div class="form-group row">
+             <div class="col-sm-5"></div>
+             <div class="col-sm-4">
+             <input type="submit" name="action" class="btn btnprimary" value="Submit">
+             <input type="reset" class="btn btn-danger" 
+            value="Reset">
+             </div> 
+             </div> 
+             </form>
+             </div>
+             </div>
+             </div>
+             </div>
+            <%@include file="footer.jsp" %>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $('a').each(function(e, v){
+                if($(v).attr('href') == 'addEmpLeave.jsp'){
+                $(v).addClass('active');
+                }
+                });
+                })
+               </script> 
+               <%@include file="header.jsp" %>
+               <div class="d-sm-flex align-items-center justify-content-between mb-4">
+               <h1 class="h3 mb-0 text-gray-800">Add Employee</h1>
+               </div>
+               <div class="row">
+               <div class="col-lg-12">
+               <div class="card shadow mb-4">
+               <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+            </div>
+            <div class="card-body">
+            <form class="user" action="EmployeeService.jsp">
+            <div class="form-group row">
+            <label class="col-sm-2">User Id
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" 
+           name="userid" placeholder="User Id">
+            </div>
+            <label class="col-sm-2">Password
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="Password" class="form-control" 
+           name="password" placeholder="Password">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-2">Name
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" 
+                name="name" placeholder="Name">
+                 </div>
+                 <label class="col-sm-2">Mobile No.
+                 <span class="float-right">:</span>
+                 </label>
+                 <div class="col-sm-4">
+                 <input type="text" class="form-control" 
+                name="mobileNo" placeholder="Mobile No.">
+                 </div>
+                 </div>
+                 <div class="form-group row">
+                 <label class="col-sm-2">Email-Id
+                 <span class="float-right">:</span>
+                 </label> 
+                 <div class="col-sm-4">
+                 <input type="email" class="form-control" 
+                name="emailId" placeholder="Email-Id">
+                 </div>
+                 <label class="col-sm-2">Father Name
+                 <span class="float-right">:</span>
+                 </label>
+                 <div class="col-sm-4">
+                 <input type="text" class="form-control" 
+                name="fName" placeholder="Father Name">
+                 </div>
+                </div>
+                <div class="form-group row">
+                <label class="col-sm-2">Salary
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" 
+               name="salary" placeholder="Salary">
+                </div>
+                <label class="col-sm-2">Qulification
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" 
+               name="qulification" placeholder="Qulification">
+                </div>
+                </div>
+                <div class="form-group row">
+                <label class="col-sm-2">Joning Date
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <input type="date" class="form-control" 
+               name="dataOfJoin">
+                </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2">Address
+                    <span class="float-right">:</span>
+                    </label>
+                    <div class="col-sm-10">
+                    <textarea rows="3" class="form-control" 
+                   name="address" placeholder="Address"></textarea>
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-4">
+                    <input type="submit" name="action" class="btn btnprimary" value="Submit">
+                    <input type="reset" class="btn btn-danger" 
+                   value="Reset">
+                    </div> 
+                    </div> 
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                   <%@include file="footer.jsp" %>
+                   <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('a').each(function(e, v){
+ if($(v).attr('href') == 'addEmployee.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<%@include file="header.jsp" %>
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Add Salary</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+ </div>
+ <div class="card-body">
+    <form class="user" action="EmpSalaryService.jsp">
+    <div class="form-group row">
+    <label class="col-sm-2">User Id
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="userId" placeholder="">
+    </div>
+    <label class="col-sm-2">Name
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="userName" placeholder="">
+    </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2">Salary Fot The Month
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="forMonth">
+        </div>
+        <label class="col-sm-2">Amount
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" 
+           name="amount">
+            </div>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-2">Date
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="date" class="form-control" 
+           name="currentDate">
+            </div>
+            <label class="col-sm-2">Remark
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" 
+           name="remarks">
+            </div>
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-4">
+                <input type="submit" name="action" class="btn btnprimary" value="Submit">
+                <input type="reset" class="btn btn-danger" 
+               value="Reset">
+                </div> 
+                </div> 
+                </form>
+                </div>
+                </div>
+                </div>
+                </div>
+               <%@include file="footer.jsp" %>
+               <script type="text/javascript">
+                $(document).ready(function(){
+                $('a').each(function(e, v){
+                if($(v).attr('href') == 'AddEmpSalary.jsp'){
+                $(v).addClass('active');
+                }
+                });
+                })
+               </script> 
+               <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Add Feedback</h1>
+                </div>
+                <div class="row">
+                <div class="col-lg-12">
+                <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+                </div>
+                <div class="card-body">
+                <form class="user" action="FeedbackService.jsp">
+                <div class="form-group row">
+                <label class="col-sm-2">Name
+                <span class="float-right">:</span>
+                </label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" 
+               name="name" placeholder="">
+                </div>
+                <label class="col-sm-2">Mobile No
+                    <span class="float-right">:</span>
+                    </label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" 
+                   name="mobile" placeholder="">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label class="col-sm-2">Email-Id
+                    <span class="float-right">:</span>
+                    </label>
+                    <div class="col-sm-4">
+                    <input type="emial" class="form-control" 
+                   name="email">
+                    </div>
+                    <label class="col-sm-2">Subject
+                    <span class="float-right">:</span>
+                    </label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" 
+                   name="subject">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <label class="col-sm-2">Message
+                        <span class="float-right">:</span>
+                    </label>
+                    <div class="col-sm-4">
+                    <input type="text" class="form-control" 
+                   name="message">
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <div class="col-sm-5"></div>
+                    <div class="col-sm-4">
+                    <input type="submit" name="action" class="btn btnprimary" value="Submit">
+                    <input type="reset" class="btn btn-danger" 
+                   value="Reset">
+                    </div> 
+                    </div> 
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                                                                       
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                        $('a').each(function(e, v){
+                        if($(v).attr('href') == 'addFeedback.jsp'){
+                            $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Payment</h1>
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+</div>
+<div class="card-body">
+<form class="user" action="PaymentService.jsp">
+<div class="form-group row">
+<label class="col-sm-2">Fee Id
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="vchfeeId">
+</div>
+<label class="col-sm-2">Payment Mode
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="vchPaymentMode" >
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2">Date
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="date" class="form-control" 
+name="vchPaymentDate" >
+</div>
+<label class="col-sm-2">Amount
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="number" class="form-control" 
+name="vchPaymentAmount" >
+</div>
+</div>
+<div class="form-group row"> 
+<label class="col-sm-2">Due
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="number" class="form-control" 
+name="vchDueAmount">
+</div>
+<label class="col-sm-2">Received By
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="vchReceivedBy" >
+</div>
+</div>
+<div class="form-group row">
+    <label class="col-sm-2">Paid By
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="vchPaidBy" >
+        </div> 
+        <label class="col-sm-2">Remark
+        <span class="float-right">:</span>
+        </label> 
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="vchRemarks">
+        </div> 
+        </div>
+        <div class="form-group row">
+        <div class="col-sm-5"></div>
+        <div class="col-sm-4">
+        <input type="submit" name="action" class="btn btnprimary" value="Submit">
+        <input type="reset" class="btn btn-danger" 
+       value="Reset">
+        </div> 
+        </div> 
+        </form>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('a').each(function(e, v){
+    if($(v).attr('href') == 'addPayment.jsp'){
+    $(v).addClass('active');
+    }
+    });
+    })
+   </script>
+   <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Location</h1>
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+    </div>
+    <div class="card-body">
+    <form class="user" action="PlaceService.jsp">
+    <div class="form-group row">
+    <label class="col-sm-2">Location Id
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="locationId" >
+    </div>
+    <label class="col-sm-2">Location Name
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="locationName" >
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2">Contact No.
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="contactNo" >
+</div>
+<label class="col-sm-2">Contact Person
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="contactPerson" >
+</div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2">City
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" name="city" >
+
+</div>
+<label class="col-sm-2">Price
+    <span class="float-right">:</span>
+    </label> 
+    <div class="col-sm-4">
+    <input type="text" class="form-control" name="rent" 
+   >
+    </div>
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-4">
+    <input type="submit" name="action" class="btn btnprimary" value="Submit">
+    <input type="reset" class="btn btn-danger" 
+   value="Reset">
+    </div> 
+    </div> 
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('a').each(function(e, v){
+            if($(v).attr('href') == 'addPlace.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Solar</h1>
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+    </div>
+    <div class="card-body">
+        <form class="user" action="SolarService.jsp">
+        <div class="form-group row">
+        <label class="col-sm-2">Id
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="proid" >
+        </div>
+        <label class="col-sm-2">Name
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="proName" >
+        </div>
+        </div>
+        <div class="form-group row">
+        <label class="col-sm-2">Type
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="protype" >
+        </div>
+        <label class="col-sm-2">Price
+            <span class="float-right">:</span>
+            </label>
+            <div class="col-sm-4">
+            <input type="text" class="form-control" 
+           name="price" >
+            </div>
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-5"></div>
+            <div class="col-sm-4">
+            <input type="submit" name="action" class="btn btnprimary" value="Submit">
+            <input type="reset" class="btn btn-danger" 
+           value="Reset">
+            </div> 
+            </div> 
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                $('a').each(function(e, v){
+                    if($(v).attr('href') == 'addSolar.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Add Seller</h1>
+    </div>
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Add</h6>
+    </div>
+    <div class="card-body">
+        <form class="user" method="post" 
+       action="sellerService.jsp">
+        <div class="form-group row">
+        <label class="col-sm-2">Name
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="strName" placeholder="Name">
+        </div>
+        <label class="col-sm-2">Age
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="number" class="form-control" 
+       name="numAge" placeholder="Age"> 
+        </div> 
+        </div>
+        <div class="form-group row"> 
+        <label class="col-sm-2">Gender
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <select class="form-control" name="strGender">
+        <option value="">--Select--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        </div>
+        <label class="col-sm-2">Mobile No.
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="strMobileNo" placeholder="Mobile No.">
+        </div> 
+        </div>
+        <div class="form-group row">
+        <label class="col-sm-2">Email-Id
+        <span class="float-right">:</span>
+        </label> 
+        <div class="col-sm-4">
+        <input type="text" class="form-control" 
+       name="strEmailId" placeholder="Email-Id">
+        </div> 
+        <label class="col-sm-2">Date
+        <span class="float-right">:</span>
+        </label>
+        <div class="col-sm-4">
+        <input type="date" class="form-control" 
+       name="strJoinDate" placeholder="Join Date">
+    </div>
+</div>
+<div class="form-group row">
+<label class="col-sm-2">Address
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-10">
+<textarea rows="3" class="form-control" 
+name="strAddress" placeholder="Address"></textarea>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-sm-5"></div>
+<div class="col-sm-4">
+<input type="submit" name="action" class="btn btnprimary" value="Submit">
+<input type="reset" class="btn btn-danger" 
+value="Reset">
+</div> 
+</div> 
+</form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('a').each(function(e, v){
+    if($(v).attr('href') == 'addSeller.jsp'){
+    $(v).addClass('active');
+    }
+    });
+    })
+   </script>  
+    <jsp:useBean id="u" 
+  class="com.mypro.proclass.bean.Booking"></jsp:useBean> 
+  <jsp:setProperty property="*" name="u"/>
+   
+  <% String strAction=request.getParameter("action"); 
+ 
+ if(strAction.equals("Submit")){
+ int i=BookingDao.save(u); 
+ response.sendRedirect("viewBooking.jsp");
+ }else if(strAction.equals("Update")){
+ int i=BookingDao.update(u); 
+ response.sendRedirect("viewBooking.jsp"); 
+ }else if(strAction.equals("Delete")){
+ BookingDao.delete(u); 
+ response.sendRedirect("viewBooking.jsp"); 
+ }else{
+ response.sendRedirect("viewBooking.jsp");
+ } 
+ 
+%>
+ContactUsService
+<%@page import="com.mypro.proclass.dao.ContactUsDao"%> 
+<jsp:useBean id="u" 
+class="com.mypro.proclass.bean.ContactUs"></jsp:useBean> 
+<jsp:setProperty property="*" name="u"/> 
+ 
+<% 
+ 
+ String strAction=request.getParameter("action"); 
+ 
+ if(strAction.equals("Submit")){
+ int i=ContactUsDao.Save(u); 
+ response.sendRedirect("viewContactus.jsp");
+ }else{
+ response.sendRedirect("viewContactus.jsp");
+ }
+ %>
+ EditBuyer
+<%@include file="header.jsp" %>
+<%@page 
+import="com.mypro.proclass.dao.BuyerDao,com.mypro.proclass.bean.Buyer
+"%> 
+<% 
+String id=request.getParameter("id"); 
+Buyer u=BuyerDao.getRecordById(Integer.parseInt(id)); 
+%> 
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Update Buyer</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Update</h6>
+ </div>
+<div class="card-body">
+ <form class="user" action="BuyerService.jsp">
+ <input type="hidden" name="numStaffId" 
+value="<%=u.getNumStaffId()%>">
+ <div class="form-group row">
+ <label class="col-sm-2">Name
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+name="strName" value="<%=u.getStrName()%>" placeholder="Name">
+ </div>
+ <label class="col-sm-2">Age
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="number" class="form-control" 
+name="numAge" value="<%=u.getNumAge()%>" placeholder="Age"> 
+ </div> 
+ </div>
+ <div class="form-group row"> 
+ <label class="col-sm-2">Gender
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+<select class="form-control" name="strGender" 
+value="<%=u.getStrGender()%>">
+ <option value="">--Select--</option>
+ <option <%=("Male".equals(u.getStrGender()) ? 
+"Selected":"")%> value="Male">Male</option>
+ <option <%=("Female".equals(u.getStrGender()) ? 
+"Selected":"")%> value="Female">Female</option>
+ </select>
+ </div>
+ <label class="col-sm-2">Mobile No.
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+name="strMobileNo" value="<%=u.getStrMobileNo()%>" 
+placeholder="Mobile No.">
+ </div> 
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Email-Id
+ <span class="float-right">:</span>
+ </label> 
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+name="strEmailId" value="<%=u.getStrEmailId()%>" placeholder="EmailId">
+ </div>
+<label class="col-sm-2">Date
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="date" class="form-control" 
+name="strJoinDate" value="<%=u.getStrJoinDate()%>" placeholder="Join 
+Date">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Address
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-10">
+ <textarea rows="3" class="form-control" 
+name="strAddress" value="<%=u.getStrAddress()%>" 
+placeholder="Address"><%=u.getStrAddress()%></textarea>
+ </div>
+ </div>
+ <div class="form-group row">
+ <div class="col-sm-5"></div>
+ <div class="col-sm-4">
+ <input type="submit" name="action" class="btn btnprimary" value="Update">
+<!-- <input type="reset" class="btn btn-danger" 
+value="Reset">-->
+<a href="viewBuyer.jsp" class="btn btndanger">Cancel</a>
+ </div> 
+ </div> 
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+ if($(v).attr('href') == 'editBuyer.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script>
+<%@include file="header.jsp" %>
+<%@page 
+import="com.mypro.proclass.dao.EmployeeMasterDao,com.mypro.proclass.
+bean.Employeemaster"%> 
+<% 
+String id=request.getParameter("id"); 
+Employeemaster 
+u=EmployeeMasterDao.getRecordById(Integer.parseInt(id)); 
+%> 
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Update Employee</h1>
+ </div>
+ <div class="row">
+ <div class="col-lg-12">
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Update</h6>
+ </div>
+ <div class="card-body">
+ <form class="user" action="EmployeeService.jsp">
+ <input type="hidden" name="seqid" 
+value="<%=u.getSeqid()%>"/> 
+ <div class="form-group row">
+<label class="col-sm-2">User Id
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getUserid()%>" name="userid" placeholder="User Id">
+ </div>
+ <label class="col-sm-2">Password
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="Password" class="form-control" 
+value="<%=u.getPassword()%>" name="password" 
+placeholder="Password">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Name
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getName()%>" name="name" placeholder="Name">
+ </div>
+ <label class="col-sm-2">Mobile No.
+ <span class="float-right">:</span>
+</label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getMobileNo()%>" name="mobileNo" placeholder="Mobile 
+No.">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Email-Id
+ <span class="float-right">:</span>
+ </label> 
+ <div class="col-sm-4">
+ <input type="email" class="form-control" 
+value="<%=u.getEmailId()%>" name="emailId" placeholder="Email-Id">
+ </div>
+ <label class="col-sm-2">Father Name
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getFName()%>" name="fName" placeholder="Father 
+Name">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Salary
+<span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getSalary()%>" name="salary" placeholder="Salary">
+ </div>
+ <label class="col-sm-2">Qualification
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+value="<%=u.getQulification()%>" name="qulification" 
+placeholder="Qualification">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Joining Date
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="date" class="form-control" 
+value="<%=u.getDataOfJoin()%>" name="dataOfJoin">
+ </div>
+ </div>
+ <div class="form-group row">
+ <label class="col-sm-2">Address
+<span class="float-right">:</span>
+ </label>
+ <div class="col-sm-10">
+ <textarea rows="3" class="form-control" 
+name="address" value="<%=u.getAddress()%>" 
+placeholder="Address"><%=u.getAddress()%></textarea>
+ </div>
+ </div>
+ <div class="form-group row">
+ <div class="col-sm-5"></div>
+ <div class="col-sm-4">
+ <input type="submit" name="action" class="btn btnprimary" value="Update">
+ <a href="viewDoctor.jsp" class="btn btndanger">Cancel</a>
+ </div> 
+ </div> 
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+<%@include file="footer.jsp" %>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+    if($(v).attr('href') == 'editEmployee.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">Update Payment</h1>
+</div>
+<div class="row">
+<div class="col-lg-12">
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">Update</h6>
+</div>
+<div class="card-body">
+<form class="user" action="PaymentService.jsp">
+<input type="hidden" name="intPaymentId" 
+value="<%=u.getIntPaymentId()%>"/> 
+<div class="form-group row">
+<label class="col-sm-2">Fee Id
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="vchfeeId" value="<%=u.getVchfeeId()%>">
+</div>
+<label class="col-sm-2">Payment Mode
+<span class="float-right">:</span>
+</label>
+<div class="col-sm-4">
+<input type="text" class="form-control" 
+name="vchPaymentMode" value="<%=u.getVchPaymentMode()%>">
+</div>
+
+<label class="col-sm-2">Received By
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="vchReceivedBy" value="<%=u.getVchReceivedBy()%>">
+    </div>
+    </div>
+    <div class="form-group row"> 
+    <label class="col-sm-2">Paid By
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="vchPaidBy" value="<%=u.getVchPaidBy()%>">
+    </div> 
+    <label class="col-sm-2">Remark
+    <span class="float-right">:</span>
+    </label> 
+    <div class="col-sm-4">
+    <input type="text" class="form-control" 
+   name="vchRemarks" value="<%=u.getVchRemarks()%>">
+    </div> 
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-4">
+        <input type="submit" name="action" class="btn btnprimary" value="Update">
+        <a href="viewPayment.jsp" class="btn btndanger">Cancel</a>
+        </div> 
+        </div> 
+        </form>
+        </div>
+        </div>
+        </div>
+    </div>
+       <script type="text/javascript">
+        $(document).ready(function(){
+        $('a').each(function(e, v){
+        if($(v).attr('href') == 'editPayment.jsp'){
+        $(v).addClass('active');
+        }
+        });
+        })
+       </script>   
+        
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Update Seller</h1>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="card shadow mb-4">
+        <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Update</h6>
+        </div>
+        <div class="card-body">
+        <form class="user" action="sellerService.jsp">
+            <input type="hidden" name="numStaffId" 
+value="<%=u.getNumStaffId()%>">
+ <div class="form-group row">
+ <label class="col-sm-2">Name
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="text" class="form-control" 
+name="strName" value="<%=u.getStrName()%>" placeholder="Name">
+ </div>
+ <label class="col-sm-2">Age
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <input type="number" class="form-control" 
+name="numAge" value="<%=u.getNumAge()%>" placeholder="Age"> 
+ </div> 
+ </div>
+ <div class="form-group row"> 
+ <label class="col-sm-2">Gender
+ <span class="float-right">:</span>
+ </label>
+ <div class="col-sm-4">
+ <select class="form-control" name="strGender" 
+value="<%=u.getStrGender()%>">
+ <option value="">--Select--</option>
+ <option <%=("Male".equals(u.getStrGender()) ? 
+ "Selected":"")%> value="Male">Male</option>
+  <option <%=("Female".equals(u.getStrGender()) ? 
+ "Selected":"")%> value="Female">Female</option>
+  </select>
+  </div>
+  <label class="col-sm-2">Mobile No.
+  <span class="float-right">:</span>
+  </label>
+  <div class="col-sm-4">
+  <input type="text" class="form-control" 
+ name="strMobileNo" value="<%=u.getStrMobileNo()%>" 
+ placeholder="Mobile No.">
+  </div> 
+  </div>
+  <div class="form-group row">
+  <label class="col-sm-2">Email-Id
+  <span class="float-right">:</span>
+  </label> 
+  <div class="col-sm-4">
+  <input type="text" class="form-control" 
+ name="strEmailId" value="<%=u.getStrEmailId()%>" placeholder="EmailId">
+  </div>
+  <label class="col-sm-2">Date
+  <span class="float-right">:</span>
+  </label>
+  <div class="col-sm-4">
+    <input type="date" class="form-control" 
+   name="strJoinDate" value="<%=u.getStrJoinDate()%>" placeholder="Join 
+   Date">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-sm-2">Address
+    <span class="float-right">:</span>
+    </label>
+    <div class="col-sm-10">
+    <textarea rows="3" class="form-control" 
+   name="strAddress" value="<%=u.getStrAddress()%>" 
+   placeholder="Address"><%=u.getStrAddress()%></textarea>
+    </div>
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-4">
+    <input type="submit" name="action" class="btn btnprimary" value="Update">
+   <!-- <input type="reset" class="btn btn-danger" 
+   value="Reset">-->
+    <a href="viewSeller.jsp" class="btn btndanger">Cancel</a>
+    </div> 
+    </div> 
+</form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('a').each(function(e, v){
+    if($(v).attr('href') == 'editSeller.jsp'){
+    $(v).addClass('active');
+    }
+    });
+    })
+   </script>
+  </div>
+  <!-- /.container-fluid -->
+  </div>
+  <!-- End of Main Content -->
+  <!-- Footer -->
+  <footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+  <div class="copyright text-center my-auto">
+  <span>Copyright &copy; ONLINE BUSSINESSES FOR SOLAR 
+ POWER</span>
+  </div>
+  </div>
+</footer>
+<!-- End of Footer -->
+</div>
+<!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+</a>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" 
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLabel">Ready to 
+Leave?</h5>
+<button class="close" type="button" data-dismiss="modal" arialabel="Close">
+<span aria-hidden="true">X</span>
+</button>
+</div>
+<div class="modal-body">Select "Logout" below if you are ready to 
+end your current session.</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" type="button" datadismiss="modal">Cancel</button>
+<a class="btn btn-danger" href="logoutprocess.jsp">Logout</a>
+</div>
+</div>
+</div>
+</div>
+<script src="static/jquery.min.js"></script>
+<script src="static/bootstrap.bundle.min.js"></script>
+<script src="static/jquery.easing.min.js"></script>
+<script src="static/sb-admin-2.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1, 
+shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <title>ONLINE BUSSINESSES FOR SOLAR POWER - Forgot 
+Password</title>
+ <!-- Custom fonts for this template-->
+ <link href="static/all.min.css" rel="stylesheet" type="text/css">
+ <link 
+href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,40
+0,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ <!-- Custom styles for this template-->
+ <link href="static/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-primary">
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+        <div class="col-lg-6 d-none d-lg-block bg-passwordimage"></div>
+        <div class="col-lg-6">
+        <div class="p-5">
+        <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-2">Forgot Your 
+       Password?</h1>
+        <p class="mb-4">We get it, stuff happens. Just enter your 
+       email address below and we'll send you a link to reset your password!</p>
+        </div>
+        <form class="user">
+        <div class="form-group">
+        </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="static/jquery.min.js"></script>
+        <script src="static/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="static/jquery.easing.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="static/sb-admin-2.min.js"></script>
+       </body>
+       </html>
+       <!DOCTYPE html>
+       <html lang="en">
+        <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, 
+        shrink-to-fit=no">
+         <meta name="description" content="">
+         <meta name="author" content="">
+         <title>ONLINE BUSSINESSES FOR SOLAR POWER </title>
+         <link rel="icon" href="img/download.jpg" type="image/x-icon">
+         <!-- Custom fonts for this template-->
+         <link href="static/all.min.css" rel="stylesheet" type="text/css">
+         <link 
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,40
+        0,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+         <!-- Custom styles for this template-->
+         <link href="static/sb-admin-2.min.css" rel="stylesheet">
+        </head>
+        <body id="page-top">
+        <!-- Page Wrapper -->
+ <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark 
+   accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-contentcenter" href="index.jsp">
+    <div class="sidebar-brand-icon rotate-n-15">
+    <i class="fa fa-home"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">Online Solar</div>
+    </a>
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+    <a class="nav-link" href="index.jsp">
+    <i class="fas fa-fw fa-tachometer-alt"></i>
+    <span>Home</span></a>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider">
+<!-- Heading -->
+<div class="sidebar-heading">
+Admin
+</div>
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+<a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+<i class="fas fa-fw fa-cog"></i>
+<span>Employee</span>
+</a>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Employee:</h6>
+<a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+<a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+<a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider">
+<!-- Heading -->
+<div class="sidebar-heading">
+Admin
+</div>
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+<a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+<i class="fas fa-fw fa-cog"></i>
+<span>Employee</span>
+</a>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Employee:</h6>
+<a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+<a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+<a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+ Admin
+ </div>
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+ <a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ <i class="fas fa-fw fa-cog"></i>
+ <span>Employee</span>
+ </a>
+ <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Employee:</h6>
+ <a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+ <a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+ <a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+ Admin
+ </div>
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+ <a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ <i class="fas fa-fw fa-cog"></i>
+ <span>Employee</span>
+ </a>
+ <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Employee:</h6>
+ <a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+ <a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+ <a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+ Admin
+ </div>
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+ <a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ <i class="fas fa-fw fa-cog"></i>
+ <span>Employee</span>
+ </a>
+ <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Employee:</h6>
+ <a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+ <a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+ <a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+ <!-- Divider -->
+ <hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+ Admin
+ </div>
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+ <a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+ <i class="fas fa-fw fa-cog"></i>
+ <span>Employee</span>
+ </a>
+ <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Employee:</h6>
+ <a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+ <a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+ <a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider">
+<!-- Heading -->
+<div class="sidebar-heading">
+Admin
+</div>
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+<a class="nav-link" href="#" data-toggle="collapse" datatarget="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+<i class="fas fa-fw fa-cog"></i>
+<span>Employee</span>
+</a>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" 
+data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">Employee:</h6>
+<a class="collapse-item" href="addEmployee.jsp">Add 
+Employee</a>
+<a class="collapse-item" 
+href="addEmpAttendence.jsp">Attendance</a>
+<a class="collapse-item" href="AddEmpSalary.jsp">Salary</a>
+<a class="collapse-item" href="addEmpLeave.jsp">Leave</a
+</div>
+</div>
+</li>
+<!-- Nav Item - Utilities Collapse Menu -->
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapseUtilities" aria-expanded="true" ariacontrols="collapseUtilities">
+<i class="fas fa-fw fa-wrench"></i>
+<span>Master</span>
+</a>
+<div id="collapseUtilities" class="collapse" arialabelledby="headingUtilities" data-parent="#accordionSidebar">
+<div class="bg-white py-2 collapse-inner rounded">
+<h6 class="collapse-header">All Master:</h6>
+<a class="collapse-item" href="addSolar.jsp">Add Solar</a>
+<a class="collapse-item" href="addSeller.jsp">Add Seller</a>
+<a class="collapse-item" href="addBuyer.jsp">Add Buyer</a>
+<a class="collapse-item" href="addPlace.jsp">Add Location</a>
+</div>
+</div>
+</li>
+<!-- Divider -->
+<hr class="sidebar-divider">
+ <!-- Heading -->
+ <div class="sidebar-heading">
+ Website
+ </div>
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientPages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Service</span>
+ </a>
+ <div id="patientPages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <a class="collapse-item" href="addBooking.jsp">Add Booking</a>
+ <a class="collapse-item" href="addPayment.jsp">Add 
+Payment</a>
+ </div>
+ </div>
+ </li>
+ <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Application</span>
+        </a>
+        <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">User Details:</h6>
+        <a class="collapse-item" href="login.jsp">Login</a>
+        <a class="collapse-item" href="register.jsp">Register</a>
+        <a class="collapse-item" href="forgot-password.jsp">Forgot 
+       Password</a>
+        </div>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Report</span>
+        </a>
+        <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-header">All Report:</h6>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Application</span>
+            </a>
+            <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">User Details:</h6>
+            <a class="collapse-item" href="login.jsp">Login</a>
+            <a class="collapse-item" href="register.jsp">Register</a>
+            <a class="collapse-item" href="forgot-password.jsp">Forgot 
+           Password</a>
+            </div>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Report</span>
+            </a>
+            <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">All Report:</h6>
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Application</span>
+ </a>
+ <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">User Details:</h6>
+ <a class="collapse-item" href="login.jsp">Login</a>
+ <a class="collapse-item" href="register.jsp">Register</a>
+ <a class="collapse-item" href="forgot-password.jsp">Forgot 
+Password</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Report</span>
+ </a>
+ <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">All Report:</h6>
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Application</span>
+ </a>
+ <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">User Details:</h6>
+ <a class="collapse-item" href="login.jsp">Login</a>
+ <a class="collapse-item" href="register.jsp">Register</a>
+ <a class="collapse-item" href="forgot-password.jsp">Forgot 
+Password</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Report</span>
+ </a>
+ <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">All Report:</h6>
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Application</span>
+ </a>
+ <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">User Details:</h6>
+ <a class="collapse-item" href="login.jsp">Login</a>
+ <a class="collapse-item" href="register.jsp">Register</a>
+ <a class="collapse-item" href="forgot-password.jsp">Forgot 
+Password</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Report</span>
+ </a>
+ <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">All Report:</h6>
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Application</span>
+ </a>
+ <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">User Details:</h6>
+ <a class="collapse-item" href="login.jsp">Login</a>
+ <a class="collapse-item" href="register.jsp">Register</a>
+ <a class="collapse-item" href="forgot-password.jsp">Forgot 
+Password</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Report</span>
+ </a>
+ <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">All Report:</h6>
+<a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#collapsePages" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Application</span>
+ </a>
+ <div id="collapsePages" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">User Details:</h6>
+ <a class="collapse-item" href="login.jsp">Login</a>
+ <a class="collapse-item" href="register.jsp">Register</a>
+ <a class="collapse-item" href="forgot-password.jsp">Forgot 
+Password</a>
+ </div>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#patientReport" aria-expanded="true" ariacontrols="collapsePages">
+ <i class="fas fa-fw fa-folder"></i>
+ <span>Report</span>
+ </a>
+ <div id="patientReport" class="collapse" arialabelledby="headingPages" data-parent="#accordionSidebar">
+ <div class="bg-white py-2 collapse-inner rounded">
+ <h6 class="collapse-header">All Report:</h6>
+ <a class="collapse-item" href="RegisterReport.jsp">User 
+    Report</a>
+     <a class="collapse-item" href="viewEmployee.jsp">Employee 
+    Report</a> 
+     <a class="collapse-item" 
+    href="ViewEmpAttendence.jsp">Attendance Report</a> 
+     <a class="collapse-item" href="viewEmpSalary.jsp">Salary 
+    Report</a> 
+     <a class="collapse-item" href="viewEmpLeave.jsp">Leave 
+    Report</a>
+     <a class="collapse-item" href="viewSolar.jsp">Solar Report</a>
+     <a class="collapse-item" href="viewBuyer.jsp">Buyer Report</a> 
+     <a class="collapse-item" href="viewSeller.jsp">Seller Report</a> 
+     <a class="collapse-item" href="viewBooking.jsp">Booking 
+    Report</a>
+     <a class="collapse-item" href="viewPayment.jsp">Payment 
+    Report</a> 
+     <a class="collapse-item" href="viewPlace.jsp">Location 
+    Report</a> 
+     <a class="collapse-item" href="viewContactus.jsp">Contact-Us 
+    Report</a> 
+     <a class="collapse-item" href="viewFeedback.jsp">Feedback 
+    Report</a> 
+     </div>
+     </li>
+     <li class="nav-item">
+     <a class="nav-link collapsed" href="#" data-toggle="collapse" datatarget="#help" aria-expanded="true" aria-controls="collapsePages"                  
+     <i class="fas fa-fw fa-folder"></i>
+     <span>Help</span>
+     </a>
+     <div id="help" class="collapse" aria-labelledby="headingPages" dataparent="#accordionSidebar">
+     <div class="bg-white py-2 collapse-inner rounded">
+     <h6 class="collapse-header">Help:</h6>
+     <a class="collapse-item" href="addContactus.jsp">Contact Us</a>
+     <a class="collapse-item" href="addFeedback.jsp">Feedback</a> 
+     </div>
+     </li>
+     <!-- Divider -->
+     <hr class="sidebar-divider d-none d-md-block">
+     <!-- Sidebar Toggler (Sidebar) -->
+     <div class="text-center d-none d-md-inline">
+     <button class="rounded-circle border-0" 
+    id="sidebarToggle"></button>
+     </div>
+     </ul>
+     <!-- End of Sidebar -->
+     <!-- Content Wrapper -->
+     <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 
+       static-top shadow">
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none 
+       rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+        </button>
+        <!-- Topbar Search -->
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 
+       my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group">
+        <input type="text" class="form-control bg-light border-0 small" 
+       placeholder="Search for..." aria-label="Search" aria-describedby="basicaddon2">
+        <div class="input-group-append">
+        <button class="btn btn-primary" type="button">
+        <i class="fas fa-search fa-sm"></i>
+        </button>
+    </div>
+</div>
+</form>
+<!-- Topbar Navbar -->
+<ul class="navbar-nav ml-auto">
+<!-- Nav Item - Search Dropdown (Visible Only XS) -->
+<li class="nav-item dropdown no-arrow d-sm-none">
+<a class="nav-link dropdown-toggle" href="#" 
+id="searchDropdown" role="button" data-toggle="dropdown" ariahaspopup="true" aria-expanded="false">
+<i class="fas fa-search fa-fw"></i>
+</a>
+<!-- Dropdown - Messages -->
+<div class="dropdown-menu dropdown-menu-right p-3 shadow 
+animated--grow-in" aria-labelledby="searchDropdown">
+<form class="form-inline mr-auto w-100 navbar-search">
+<div class="input-group">
+<input type="text" class="form-control bg-light border-0 
+small" placeholder="Search for..." aria-label="Search" ariadescribedby="basic-addon2">
+<div class="input-group-append">
+<button class="btn btn-primary" type="button">
+<i class="fas fa-search fa-sm"></i>
+</button>
+</div>
+</div>
+</form>
+</div>
+</li>
+
+<div class="topbar-divider d-none d-sm-block"></div>
+<!-- Nav Item - User Information -->
+<li class="nav-item dropdown no-arrow">
+<a class="nav-link dropdown-toggle" href="#" id="userDropdown" 
+role="button" data-toggle="dropdown" aria-haspopup="true" ariaexpanded="false">
+<span class="mr-2 d-none d-lg-inline text-gray-600 
+small">SATYAM RANJAN</span>
+<img class="img-profile rounded-circle" src="img/avatar.png">
+</a>
+<!-- Dropdown - User Information -->
+<div class="dropdown-menu dropdown-menu-right shadow 
+animated--grow-in" aria-labelledby="userDropdown">
+<a class="dropdown-item" href="#">
+<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+Profile
+</a>
+<a class="dropdown-item" href="#">
+    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+    Settings
+    </a>
+    <a class="dropdown-item" href="#">
+    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+    Activity Log
+    </a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#" data-toggle="modal" datatarget="#logoutModal">
+    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray400"></i>
+    Logout
+    </a>
+    </div>
+    </li>
+    </ul>
+    </nav>
+    <!-- End of Topbar -->
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+         <meta charset="utf-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1, 
+        shrink-to-fit=no">
+         <meta name="description" content="">
+         <meta name="author" content="">
+         <title>ONLINE BUSSINESSES FOR SOLAR POWER - Login</title>
+         <!-- Custom fonts for this template-->
+         <link href="static/all.min.css" rel="stylesheet" type="text/css">
+         <link 
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,40
+        0,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+         <!-- Custom styles for this template-->
+         <link href="static/sb-admin-2.min.css" rel="stylesheet">
+        </head>
+        <body class="bg-gradient-primary">
+         <div class="container">
+         <!-- Outer Row -->
+         <div class="row justify-content-center">
+         <div class="col-xl-10 col-lg-12 col-md-9">
+         <div class="card o-hidden border-0 shadow-lg my-5">
+         <div class="card-body p-0">
+<!-- Nested Row within Card Body -->
+<div class="row">
+    <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+    <div class="col-lg-6">
+    <div class="p-5">
+    <div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+    <% 
+    String 
+   profile_msg=(String)request.getAttribute("profile_msg"); 
+    if(profile_msg!=null){ 
+    out.print(profile_msg); 
+    } 
+    String 
+   login_msg=(String)request.getAttribute("login_msg"); 
+    if(login_msg!=null){ 
+    out.print(login_msg); 
+    } 
+    %> 
+    <p class="text-danger">${param.login_msg}</p>
+    </div>
+    <form class="user" method="post" 
+   action="LoginProcess.jsp">
+    <div class="form-group">
+        <input type="email" class="form-control form-control-user" 
+        name="strEmailId" aria-describedby="emailHelp" placeholder="Enter Email 
+        Address...">
+         </div>
+         <div class="form-group">
+         <input type="password" class="form-control form-controluser" name="strPassword" placeholder="Password">
+         </div>
+         <div class="form-group">
+         <div class="custom-control custom-checkbox small">
+         <input type="checkbox" class="custom-control-input" 
+        id="customCheck">
+         <label class="custom-control-label" 
+        for="customCheck">Remember Me</label>
+         </div>
+         </div>
+         <input type="Submit" value="Login" class="btn btnprimary btn-user btn-block">
+         </form> 
+         <hr>
+         <div class="text-center">
+         <a class="small" href="forgot-password.jsp">Forgot 
+        Password?</a>
+         </div>
+         <div class="text-center">
+         <a class="small" href="register.jsp">Create an Account!</a>
+         </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="static/jquery.min.js"></script>
+    <script src="static/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="static/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="static/sb-admin-2.min.js"></script>
+   </body>
+   </html>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1, 
+shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+ <title>ONLINE BUSSINESSES FOR SOLAR POWER - Register</title>
+ <!-- Custom fonts for this template-->
+ <link href="static/all.min.css" rel="stylesheet" type="text/css">
+ <link 
+href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,40
+0,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ <!-- Custom styles for this template-->
+ <link href="static/sb-admin-2.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-primary">
+ <div class="container">
+ <div class="card o-hidden border-0 shadow-lg my-5">
+ <div class="card-body p-0">
+ <!-- Nested Row within Card Body -->
+ <div class="row">
+ <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+ <div class="col-lg-7">
+    <div class="p-5">
+        <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+        </div>
+        <form class="user" method="post" 
+       action="RegisterService.jsp">
+        <div class="form-group row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+        <input type="text" class="form-control form-control-user" 
+       name="strName" placeholder="Full Name">
+        </div>
+        <div class="col-sm-6">
+        <input type="tel" class="form-control form-control-user" 
+       name="strMobileNo" placeholder="Mobile No.">
+        </div>
+        </div>
+        <div class="form-group">
+        <input type="email" class="form-control form-control-user" 
+       name="strEmailId" placeholder="Email Address">
+        </div>
+        <div class="form-group row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+        <input type="password" class="form-control form-controluser" name="strPassword" placeholder="Password">
+        </div>
+        <div class="col-sm-6">
+            <input type="password" class="form-control form-controluser" name="strConfPassword" placeholder="Repeat Password">
+        </div>
+        </div>
+        <input type="Submit" name="action" value="Register" 
+       class="btn btn-primary btn-user btn-block">
+       <!-- <a href="login.jsp" class="btn btn-primary btn-user btnblock">
+        Register Account
+        </a>-->
+        </form>
+        <hr>
+        <div class="text-center">
+        <a class="small" href="forgot-password.jsp">Forgot 
+       Password?</a>
+        </div>
+        <div class="text-center">
+        <a class="small" href="login.jsp">Already have an account? 
+       Login!</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="static/jquery.min.js"></script>
+    <script src="static/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="static/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="static/sb-admin-2.min.js"></script>
+   </body>
+   </html>
+   
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+ <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">User Report</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">Report</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+ <th>Name</th>
+ <th>Mobile No.</th>
+ <th>Email-Id</th>
+ </tr>
+</thead>
+<tfoot>
+<tr>
+<th>Name</th>
+<th>Mobile No.</th>
+<th>Email-Id</th>
+</tr>
+</tfoot>
+<tbody>
+<c:forEach items="${list}" var="u"> 
+<tr>
+<td>${u.getStrName()}</td>
+<td>${u.getStrMobileNo()}</td>
+<td>${u.getStrEmailId()}</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+ if($(v).attr('href') == 'RegisterReport.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Booking</h1>
+    </div>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">View</h6>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" 
+   width="100%" cellspacing="0">
+    <thead>
+    <tr>
+        <th>User Name</th>
+        <th>Mobile No.</th>
+        <th>Address</th>
+        <th>Booking Date</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Visit Type</th>
+        <th>Total Amount</th> 
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+        <th>User Name</th>
+        <th>Mobile No.</th>
+        <th>Address</th>
+        <th>Booking Date</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Visit Type</th>
+        <th>Total Amount</th> 
+        </tr>
+        </tfoot>
+        <tbody>
+        <c:forEach items="${list}" var="u"> 
+            <tr>
+                <td>${u.getUserName()}</td>
+                <td>${u.getMobNo()}</td>
+                <td>${u.getAddress()}</td>
+                <td>${u.getBDate()}</td>
+                <td>${u.getFDate()}</td>
+                <td>${u.getTDate()}</td>
+                <td>${u.getServicestype()}</td>
+                <td>${u.getTAmt()}</td>
+                </tr>
+                </c:forEach>
+                </tbody>
+                </table>
+                </div>
+                </div>
+                </div>
+               
+               <script src="static/jquery.dataTables.min.js"></script>
+               <script src="static/dataTables.bootstrap4.min.js"></script>
+               <script src="static/datatables-demo.js"></script>
+               <script type="text/javascript">
+                $(document).ready(function(){
+                $('a').each(function(e, v){
+                if($(v).attr('href') == 'viewBooking.jsp'){
+                    $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Buyer</h1>
+</div>
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">View</h6>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+<thead>
+<tr>
+<th>Personal Info</th>
+<th>Contact Info</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Personal Info</th>
+<th>Contact Info</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+</tfoot>
+<tbody>
+    <c:forEach items="${list}" var="u"> 
+    <tr>
+    <td>
+    <div>
+    <span>${u.getStrName()}</span><br>
+    <span>Age : ${u.getNumAge()}</span><br>
+    <span>Gender : ${u.getStrGender()}</span>
+    </div>
+    </td>
+    <td>
+    <div>
+    <span>Mobile No.: 
+   ${u.getStrMobileNo()}</span><br>
+    <span>Email-Id : ${u.getStrEmailId()}</span>
+    </div>
+    </td>
+    <td>${u.getStrJoinDate()}</td>
+    <td>
+    <a 
+   href="editBuyer.jsp?id=${u.getNumStaffId()}">Edit</a> &nbsp;<br>
+    <a 
+   href="buyerService.jsp?numStaffId=${u.getNumStaffId()}&action=Delete"
+   >Delete</a>
+    </td>
+    </tr>
+</c:forEach>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<%@include file="footer.jsp" %>
+<script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('a').each(function(e, v){
+if($(v).attr('href') == 'viewBuyer.jsp'){
+$(v).addClass('active');
+}
+});
+})
+</script>
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet"> 
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+    </div>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">View</h6>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" 
+   width="100%" cellspacing="0">
+    <thead>
+    <tr>
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+            </div>
+            <div class="card shadow mb-4">
+            <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">View</h6>
+            </div>
+            <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" 
+           width="100%" cellspacing="0">
+            <thead>
+            <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <h1 class="h3 mb-0 text-gray-800">View Payment</h1>
+ </div>
+ <div class="card shadow mb-4">
+ <div class="card-header py-3">
+ <h6 class="m-0 font-weight-bold text-primary">View</h6>
+ </div>
+ <div class="card-body">
+ <div class="table-responsive">
+ <table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+ <thead>
+ <tr>
+    <th>Fee Id</th>
+    <th>Payment Mode</th>
+    <th>Payment Date</th>
+    <th>Amount</th>
+    <th>Due</th>
+    <th>Received By</th>
+    <th>Paid By</th>
+    <th>Remark</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+    <th>Fee Id</th>
+    <th>Payment Mode</th>
+    <th>Payment Date</th>
+    <th>Amount</th>
+    <th>Due</th>
+    <th>Received By</th>
+    <th>Paid By</th>
+    <th>Remark</th>
+    <th>Action</th>
+    </tr>
+    </tfoot>
+    <tbody>
+        <c:forEach items="${list}" var="u"> 
+        <tr>
+        <td>${u.getVchfeeId()}</td>
+        <td>${u.getVchPaymentMode()}</td>
+        <td>${u.getVchPaymentDate()}</td>
+        <td>${u.getVchPaymentAmount()}</td>
+        <td>${u.getVchDueAmount()}</td>
+        <td>${u.getVchReceivedBy()}</td>
+        <td>${u.getVchPaidBy()}</td>
+        <td>${u.getVchRemarks()}</td>
+        <td>
+        <a 
+       href="editPayment.jsp?id=${u.getIntPaymentId()}">Edit</a>
+        </td>
+        </tr>
+        </c:forEach>
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        <script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+ if($(v).attr('href') == 'viewPayment.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script>
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Locations</h1>
+</div>
+<div class="card shadow mb-4">
+<div class="card-header py-3">
+<h6 class="m-0 font-weight-bold text-primary">View</h6>
+</div>
+<div class="card-body">
+<div class="table-responsive">
+<table class="table table-bordered" id="dataTable" 
+width="100%" cellspacing="0">
+<thead>
+<tr>
+<th>Location Id</th>
+<th>Location Name</th>
+<th>Contact No.</th>
+<th>Contact Person</th>
+<th>City</th>
+<th>Price</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Location Id</th>
+<th>Location Name</th>
+<th>Contact No.</th>
+<th>Contact Person</th>
+<th>City</th>
+<th>Price</th>
+</tr>
+</tfoot>
+<tbody>
+<c:forEach items="${list}" var="u"> 
+<tr>
+<td>${u.getLocationId()}</td>
+<td>${u.getLocationName()}</td>
+<td>${u.getContactNo()}</td>
+<td>${u.getContactPerson()}</td>
+<td>${u.getCity()}</td>
+<td>${u.getRent()}</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('a').each(function(e, v){
+    if($(v).attr('href') == 'viewPlace.jsp'){
+    $(v).addClass('active');
+    }
+    });
+    })
+   </script> 
+   <link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+   <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Property</h1>
+    </div>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">View</h6>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" 
+   width="100%" cellspacing="0">
+    <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Price</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Price</th>
+    </tr>
+    </tfoot>
+    <tbody>
+    <c:forEach items="${list}" var="u"> 
+    <tr>
+    <td>${u.getProid()}</td>
+    <td>${u.getProName()}</td>
+    <td>${u.getProtype()}</td>
+    <td>${u.getPrice()}</td>
+    </tr>
+    </c:forEach>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    <script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+    $('a').each(function(e, v){
+ if($(v).attr('href') == 'viewSolar.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script> 
+<link href="static/dataTables.bootstrap4.min.css" rel="stylesheet">
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">View Seller</h1>
+    </div>
+    <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">View</h6>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" 
+   width="100%" cellspacing="0">
+    <thead>
+    <tr>
+    <th>Personal Info</th>
+    <th>Contact Info</th>
+    <th>Date</th>
+    <th>Action</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+    <th>Personal Info</th>
+    <th>Contact Info</th>
+    <th>Date</th>
+    <th>Action</th>
+    </tr>
+    </tfoot>
+    <tbody>
+    <c:forEach items="${list}" var="u"> 
+    <tr>
+    <td>
+    <div>
+    <span>${u.getStrName()}</span><br>
+    <span>Age : ${u.getNumAge()}</span><br>
+    <span>Gender : ${u.getStrGender()}</span>
+    </div>
+    </td>
+    <td>
+    <div>
+    <span>Mobile No.: 
+   ${u.getStrMobileNo()}</span><br>
+    <span>Email-Id : ${u.getStrEmailId()}</span>
+    </div>
+    </td>
+    <td>${u.getStrJoinDate()}</td>
+    <td>
+    <a 
+   href="editSeller.jsp?id=${u.getNumStaffId()}">Edit</a> &nbsp;<br>
+   <a 
+   href="sellerService.jsp?numStaffId=${u.getNumStaffId()}&action=Delete">
+   Delete</a>
+</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script src="static/jquery.dataTables.min.js"></script>
+<script src="static/dataTables.bootstrap4.min.js"></script>
+<script src="static/datatables-demo.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('a').each(function(e, v){
+ if($(v).attr('href') == 'viewSeller.jsp'){
+ $(v).addClass('active');
+ }
+ });
+ })
+</script>      
